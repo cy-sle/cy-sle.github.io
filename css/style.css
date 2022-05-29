@@ -1,0 +1,83 @@
+/* My Defaults */
+html {scroll-behavior: smooth;}
+a {text-decoration: none;}
+
+/* DRY (Don't Repeat Yourself)
+   1. Display as flex */
+header, .background, .btn-cont, .btn {
+    display: flex;
+}
+
+
+/* The Styling */
+header img {
+    width: 15%;
+    height: auto;
+    margin-right: 3rem;
+    border-radius: 50%;
+}
+
+.background {
+    color: white;
+    background-image: url(/unsplash.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+header {
+    height: 600px;
+    background-attachment: fixed;
+    background-image: linear-gradient(
+        140deg,
+        rgba(212,0,127,0.75) 0%,
+        rgba(152,0,162,0.75) 35%,
+        rgba(94,0,196,0.75) 100%
+        );
+    align-items: center;
+    justify-content: center;
+}
+
+.header-details {
+    font-family: "Manrope", sans-serif;
+    color: white;
+    margin-top: -1em;
+}
+
+.header-details h1 {
+    font-weight: 800;
+    letter-spacing: -0.022em;
+}
+
+.header-details a {
+    color: inherit;
+    margin-right: 0.8em;
+}
+
+.btn-cont {
+    justify-content: center;
+}
+
+.btn {
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+
+    color: black;
+    background-color: white;
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.6);
+    border-radius: 50%;
+}
+
+.wip {
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
+.wip h1 {
+    font-weight: 800;
+    letter-spacing: -0.022em;
+}
