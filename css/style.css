@@ -1,5 +1,5 @@
 /* My Defaults */
-html {scroll-behavior: smooth;}
+html {scroll-behavior: smooth; text-rendering: optimizeLegibility;}
 a {text-decoration: none;}
 
 /* DRY (Don't Repeat Yourself)
@@ -41,15 +41,15 @@ header {
 .header-details {
     font-family: "Manrope", sans-serif;
     color: white;
-    margin-top: -1em;
 }
 
 .header-details h1 {
+    margin: 0;
     font-weight: 800;
     letter-spacing: -0.022em;
 }
 
-.header-details a {
+.soc-links a {
     color: inherit;
     margin-right: 0.8em;
 }
