@@ -1,0 +1,82 @@
+$display-wide: 1920
+$display-narrow: 375
+
+@mixin fluid($property, $min, $max)
+  $x: ($max - $min)/($display-wide - $display-narrow)
+  $y: $max - $display-wide * $x
+  #{$property}: calc(#{100*$x}vw + #{$y}px)
+
+html
+  scroll-behavior: smooth
+  text-rendering: optimizeLegibility
+
+a
+  text-decoration: none
+
+/* DRY (Don't Repeat Yourself)
+header, .background, .btn-cont, .btn
+  display: flex
+
+.pfp
+  @include fluid('height',150,225)
+  width: auto
+  margin-right: 3rem
+  border-radius: 50%
+
+.background
+  background-image: url(/assets/images/unsplash.webp)
+  background-size: cover
+  background-position: center top
+  background-attachment: fixed
+
+header
+  height: 80vh
+  width: 100%
+  background-attachment: fixed
+  background-image: linear-gradient(140deg, rgba(212, 0, 127, 0.75) 0%, rgba(152, 0, 162, 0.75) 35%, rgba(94, 0, 196, 0.75) 100%)
+  align-items: center
+  justify-content: center
+
+@media screen and (max-width: 1279px)
+  .pfp
+    margin-right: 0
+    margin-bottom: 2em
+
+  header
+    flex-direction: column
+
+.header-details
+  font-family: "Manrope", sans-serif
+  color: white
+
+  h1
+    margin: 0
+    font-weight: 800
+    letter-spacing: -0.022em
+
+.soc-links
+  a
+    color: inherit
+    margin-right: 0.8em
+
+.btn-cont
+  justify-content: center
+
+.btn
+  align-items: center
+  justify-content: center
+  width: 50px
+  height: 50px
+  margin-top: -25px
+  color: black
+  background-color: white
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.6)
+  border-radius: 50%
+
+.wip
+  font-family: "Inter", sans-serif
+  text-align: center
+
+  h1
+    font-weight: 800
+    letter-spacing: -0.022em
