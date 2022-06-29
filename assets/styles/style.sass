@@ -24,13 +24,14 @@ header, .background, .btn-cont, .btn
   border-radius: 50%
 
 .background
-  background-image: url(/assets/images/unsplash.webp)
+  background-image: url(/assets/images/fallback.webp) // if avif not supported
+  background-image: url(/assets/images/wp.avif)
   background-size: cover
   background-position: center top
   background-attachment: fixed
 
 header
-  height: 80vh
+  height: 75vh
   width: 100%
   background-attachment: fixed
   background-image: linear-gradient(140deg, rgba(212, 0, 127, 0.75) 0%, rgba(152, 0, 162, 0.75) 35%, rgba(94, 0, 196, 0.75) 100%)
@@ -41,15 +42,15 @@ header
   .pfp
     margin-right: 0
     margin-bottom: 2em
-
   header
+    text-align: center
     flex-direction: column
 
 .header-details
   font-family: "Manrope", sans-serif
   color: white
-
   h1
+    @include fluid('font-size', 32, 48)
     margin: 0
     font-weight: 800
     letter-spacing: -0.022em
@@ -59,12 +60,11 @@ header
     color: inherit
     margin-right: 0.8em
 
-.btn-cont
+.btn, .btn-cont
   justify-content: center
 
 .btn
   align-items: center
-  justify-content: center
   width: 50px
   height: 50px
   margin-top: -25px
@@ -76,7 +76,6 @@ header
 .wip
   font-family: "Inter", sans-serif
   text-align: center
-
   h1
     font-weight: 800
     letter-spacing: -0.022em
