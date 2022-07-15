@@ -1,0 +1,46 @@
+.skills  // DEBUGGING
+  /* div // container-a
+    border-width: 1px
+    border-style: solid
+    border-color: red
+    div // boxes-container
+      border-color: blue
+      div // boxes
+        border-color: black */
+  //
+  justify-content: center
+  flex-wrap: wrap
+
+.container
+  background-color: white
+  margin: 1.5em
+  padding: 1.5em
+  width: 200px
+  border-radius: 15px
+  box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.25)
+
+@media screen and (max-width: 600px)
+  .container
+    width: 80vw
+
+.boxes-container
+  flex-direction: row
+  flex-wrap: wrap
+  gap: 5px
+
+.boxes
+  font-size: 0.85em
+  border: 1px solid #aaaaaa
+  border-radius: 7.5px
+  color: black
+  align-items: center
+  padding: 4px
+  img
+    margin-right: 3px
+
+.ancrit //FIXME: wtf is this
+  height: 50%
+  font-size: 2em
+  color: #aaaaaa
+  justify-content: center
+  align-items: center

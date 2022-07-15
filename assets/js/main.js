@@ -1,0 +1,26 @@
+//TODO: animate on scroll using scrollmagic
+
+var h_anim = anime.timeline({
+    easing: 'easeOutQuad'
+});
+
+var link_anim = anime.timeline({
+    easing: 'easeOutQuad'
+});
+
+window.addEventListener('load',() => {
+    h_anim.add({
+        targets: ['.pfp', '.header-details > h1', '.header-details > p'],
+        translateY: [-35, 0],
+        opacity: [0, 1],
+        delay: anime.stagger(250, {start: 200}),
+        duration: 750
+    })
+    link_anim.add({
+        targets: '.soc-links',
+        translateY: [-20, 0],
+        opacity: [0, 1],
+        delay: 1100,
+        duration: 700
+    })
+});

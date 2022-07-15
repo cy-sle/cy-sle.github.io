@@ -1,0 +1,12 @@
+// -----  Fluid sizing by Mikhail Sharanda (Modified to fix warnings)  ----------
+// https://www.creativebloq.com/how-to/build-adaptive-layouts-without-media-queries
+
+$display-wide: 1920
+$display-narrow: 375
+
+@mixin fluid($property, $min, $max)
+  $x: calc(($max - $min)/($display-wide - $display-narrow))
+  $y: $max - $display-wide * $x
+  #{$property}: calc(#{100*$x}vw + #{$y}px)
+
+/*--------                                       ------------*/
