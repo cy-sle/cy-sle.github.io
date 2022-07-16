@@ -5,13 +5,19 @@
   width: auto
   margin-bottom: 2em
   border-radius: 50%
+  opacity: 0
 
 .background
+  height: 90vh
+  width: 100%
+  position: absolute
   background-image: url(/assets/images/fallback.webp) // if avif not supported
   background-image: url(/assets/images/wp.avif)
   background-size: cover
   background-position: center top
   background-attachment: fixed
+  opacity: 0
+  z-index: -1
 
 header
   height: 90vh
@@ -31,8 +37,10 @@ header
     margin: 0
     font-weight: 700
     letter-spacing: -0.033em
+    opacity: 0
   p
     font-weight: 300
+    opacity: 0
 
 .soc-links
   justify-content: center
@@ -40,6 +48,7 @@ header
   gap: 1em
   a
     color: inherit
+    opacity: 0
   svg
     fill: rgba(255, 255, 255, 0)
     transition: fill .25s
